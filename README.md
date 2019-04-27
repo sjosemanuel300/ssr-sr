@@ -1,4 +1,4 @@
-# Builder
+# Ssr-Sr
 
 Please help us o. Thanks in advance!
 
@@ -6,20 +6,14 @@ Please help us o. Thanks in advance!
 
 ``` bash
 # clone the repo
-$ git clone https://git.manzanares.com.ve/git/joseManuel/builder.git
+$ git clone https://github.com/sjosemanuel300/ssr-sr.git
 
 # go into app's directory
-$ cd builder
+$ cd ssr-sr
 
 # install app's dependencies
 $ npm install
 ```
-
-## Create React App
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
-
-see also:
-[User Guide](CRA.md)
 
 ### Basic usage
 
@@ -50,22 +44,22 @@ CoreUI-React#v2.0.0
 │   └── index.html   #html temlpate
 │
 ├── src/             #project root
-│   ├── containers/  #container source
-│   ├── scss/        #user scss/css source
-│   ├── views/       #views source
+│   ├── assets/  
+│   ├── components/  
+│   ├── handlers/  
+│   ├── language/
+│   ├── scss/      
+│   ├── store/
+│   ├── views/     
+│   ├── _data.js
 │   ├── App.js
-│   ├── App.test.js
 │   ├── index.js
-│   ├── _nav.js      #sidebar config
-│   └── routes.js    #routes config
+│   ├── polyfill.js
+│   ├── routes.js
+│   └── setupTests.js
 │
 └── package.json
 ```
-
-## Documentation
-
-The documentation for the CoreUI  Admin Template is hosted at our website [CoreUI for React](https://coreui.io/react/)
-
 
 ## Contributing
 

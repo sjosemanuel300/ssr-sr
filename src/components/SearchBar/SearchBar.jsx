@@ -33,19 +33,14 @@ export default class SearchBar extends Component {
 
     onSearchChange = (e) => {
         const {name, value} = e.target;
-
-        this.setState({
+        
+        this.setState(prevState => ({
             ...prevState,
             [name]: value
-        });
-
-        if (value === '') {
-            this.props.refreshList(this.state);
-        } else {
-            this.setState({
-                showRemoveIcon: true
-            });
-        }
+        }));
+        // if (value !== '') {
+        //     this.props.refreshList(this.state);
+        // }
 
         if (e.keyCode === 13) {
             this.props.refreshList(this.state);
@@ -58,6 +53,7 @@ export default class SearchBar extends Component {
             searchValueNum: '',
             selectValue: ''
         });
+        
     };
 
     toggleData = (data) => {
@@ -72,7 +68,7 @@ export default class SearchBar extends Component {
             <InputGroup className="search">
                 <Input type="text" name="searchValue" placeholder={ this.props.placeholder } onKeyUp={ (e) => this.onSearchChange(e) } />
                 <div className="input-group select-group">
-                    <TemplateDropdown name=''>
+                    <TemplateDropdown name={this.state.selectValue}>
                         { obj.map( (templates, key) => {
                             return (<DropdownItem key={ key } onClick={ () => this.toggleData(key) } ><i className="fa fa-bell-o"/> { templates }</DropdownItem>);
                         }) }
@@ -80,8 +76,8 @@ export default class SearchBar extends Component {
                 </div>
                 <Input type="number" name="searchValueNum" placeholder={ this.props.placeholder2 } onKeyUp={ (e) => this.onSearchChange(e) } />
                 <InputGroupAddon addonType="append">
-                    <Button type="button" color="link"><i className="icon-magnifier icons font-2xl"/></Button>
-                    <Button type="button" color="link" onClick={this.onRemoveIconClick} >
+                    <Button type="button" color="link" onClick={ () => this.props.refreshList(this.state) }><i className="icon-magnifier icons font-2xl"/></Button>
+                    <Button type="button" color="link" onClick={ () => this.onRemoveIconClick } >
                         <i className="icon-refresh icons font-2xl d-block"/>
                     </Button>
                 </InputGroupAddon>
@@ -90,10 +86,6 @@ export default class SearchBar extends Component {
         )
     }
 }
-
-SearchBar.PropTypes = {
-    placeholder: PropTypes.string
-};
 
 SearchBar.defaultProps = {
     placeholder: json_lang.common.search_placeholder

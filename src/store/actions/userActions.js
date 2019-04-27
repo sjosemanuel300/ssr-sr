@@ -1,8 +1,6 @@
 import NotificationHandler from '../../handlers/Notifications';
-import axios from 'axios';
 import store from '../store';
 import initData from '../../_data';
-
 /**
  * @description loads the selected language json file for the given code [es, en]
  * @param code
@@ -17,7 +15,7 @@ let loadJsonLang = (code) => {
 
 /**
  * @description fetch all users
- * @returns {function(*): Promise<AxiosResponse<any> | never | never>}
+ * @returns 
  */
 const getTable = () => {
     return (dispatch) => {
@@ -28,9 +26,56 @@ const getTable = () => {
         }
 };
 
+const searchDataString = ( data, searchValue ) => {
+    let results = [];
+    let no_results = [];
+    data.forEach(element => {
+        if (element.name.toLowerCase().search(searchValue.toLowerCase()) > -1){
+            results.push(element);
+        }else {
+            no_results.push(element);
+        }
+    });
+    return results.concat(no_results);
+}
+
+const searchDataSelecte = ( data, searchValue ) => {
+    let results = [];
+    let no_results = [];
+    data.forEach(element => {
+        if (element.position.toLowerCase().search(searchValue.toLowerCase()) > -1){
+            results.push(element);
+        }else {
+            no_results.push(element);
+        }
+    });
+    return results.concat(no_results);
+}
+
+const searchData = ( data ) => {
+    return (dispatch) => {
+        console.log( data );
+        let table = initData;  
+        let searchName = [], selectValue = [], res = [];
+        if(data.searchValue !== ''){
+            searchName = searchDataString( table.dataTransactions.data, data.searchValue);
+        }
+        if(data.selectValue !== '' ) {
+            selectValue = searchDataSelecte( table.dataTransactions.data, data.selectValue);
+        }
+        console.log(selectValue);
+        table.dataTransactions.data = searchName.concat( selectValue );
+        
+        dispatch({
+            type: 'SET_TABLE',
+            data: table
+        })
+    }
+}
+
 /**
  * @description updates user app data.
- * @returns {function(*): Promise<AxiosResponse<any> | never | never>}
+ * @returns 
  */
 const updateUser = () => {
     
@@ -40,35 +85,6 @@ const updateUser = () => {
             "last_name": store.getState().clientReducer.user.new_last_name
         };
         dispatch({type: "WAIT_FOR_RESPONSE"});
-        return axios.put(URL + '/users/' + store.getState().clientReducer.user.id, aux_data).then( (res) => {
-
-            let data = res.data.user;
-            data.new_first_name = res.data.user.first_name;
-            data.new_last_name = res.data.user.last_name;
-            data.new_email = res.data.user.email;
-            data.new_email_confirmation = '';
-            data.old_password = '';
-            data.new_password = '';
-            data.new_password_confirmation = '';
-            data.apps = store.getState().clientReducer.user.apps;
-
-            dispatch({
-                type: 'FETCH_USER',
-                user: data,
-                session: res.data.user,
-            });
-
-            dispatch({
-                type: 'NOTIFICATION',
-                notification: NotificationHandler(res)
-            })
-
-        }).catch((err) => {
-            dispatch({
-                type: 'NOTIFICATION',
-                notification: NotificationHandler(err.response)
-            })
-        });
     }
 };
 
@@ -100,5 +116,7 @@ const changeUserDefaultLanguage = (code) => {
 export {
     getTable,
     updateUser,
-    changeUserDefaultLanguage
+    changeUserDefaultLanguage,
+    searchData,
+    searchDataString
 };

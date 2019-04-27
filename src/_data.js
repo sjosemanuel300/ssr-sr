@@ -1,37 +1,50 @@
 export default {
     ready: true,
     dataTransactions: {
-        "data":[
+        data:[
             {
-               "id":1,
-               "name":"Emmanuel Rodriguez",
-               "team":"erodriguez1@manzanares.com.ve",
-               "age":30,
-               "position":"es",
+               id:1,
+               name:'Emmanuel Rodriguez',
+               team:'erodriguez1@manzanares.com.ve',
+               age:30,
+               position:'Central Midfield',
             },
             {
-               "id":2,
-               "name":"Jose Manuel Salazar",
-               "team":"",
-               "age":30,
-               "position":"es",
+               id:2,
+               name:'Jose Manuel Salazar',
+               team:'',
+               age:30,
+               position:'Attacking Midfield',
             },
-      
+            {
+               id:3,
+               name:'aco',
+               team:'erodriguez1@manzanares.com.ve',
+               age:30,
+               position:'Attacking Midfield',
+            },
+            {
+               id:4,
+               name:'loder',
+               team:'erodriguez1@manzanares.com.ve',
+               age:30,
+               position:'Centre-Back',
+            },
          ],
-         "links":{
-            "first":"https:\/\/my-api\/api\/users?page=1",
-            "last":"https:\/\/my-api\/api\/users?page=1",
-            "prev":null,
-            "next":null
+         links:{
+            first : 'https://my-api/api/users?page=1',
+            last : 'https://my-api/api/users?page=1',
+            prev : null,
+            next : null
          },
-         "meta":{
-            "current_page":1,
-            "from":1,
-            "last_page":1,
-            "path":"https:\/\/my-api\/api\/users",
-            "per_page":"10",
-            "to":5,
-            "total":5
+         meta:{
+            current_page: 1,
+            from: 1,
+            last_page: 1,
+            path :'https://my-api/api/users',
+            per_page: 10,
+            to: 5,
+            total: 5
          }
     },
     limitTransactions: 10,

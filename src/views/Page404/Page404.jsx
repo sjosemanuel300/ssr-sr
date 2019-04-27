@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Col, Container, Row } from 'reactstrap';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 
 class Page404 extends Component {
   render() {
@@ -15,9 +14,6 @@ class Page404 extends Component {
                 <h4 className="pt-3">{ this.props.lang.page_404.title }</h4>
                 <p className="text-muted float-left">{ this.props.lang.page_404.message }</p>
               </div>
-              {
-               // Object.keys(this.props.session).length > 0 ? <Link to="/generator">Ir al generador</Link> : <Link to="/login">Iniciar sesión</Link>
-              }
             </Col>
           </Row>
         </Container>

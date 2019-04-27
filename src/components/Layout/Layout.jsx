@@ -13,10 +13,6 @@ import DefaultHeader from './DefaultHeader';
 
 class Layout extends Component {
 
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		let render_views, admin_views;
 
