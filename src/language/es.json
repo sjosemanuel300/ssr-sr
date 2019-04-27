@@ -1,0 +1,586 @@
+{
+	"validation_keys": {
+		"first_name": "nombre",
+		"last_name": "apellido",
+		"company_name": "compañia",
+		"category_id": "categoría"
+	},
+	"buttons": {
+		"add": "Agregar",
+		"create": "Crear",
+		"save": "Guardar",
+		"delete": "Eliminar",
+		"edit": "Editar",
+		"update": "Actualizar",
+		"fix": "Corregir",
+		"search": "Buscar",
+		"confirm": "Confirmar"
+	},
+	"common": {
+		"waiting_message": "Por favor espere...",
+		"search_placeholder": "Buscar...",
+		"search_button": "Buscar",
+		"select_placholder": "Seleccione...",
+		"key_password_dont_match": "No coincide con el campo contraseña del certificado",
+		"alias_password_dont_match": "no coincide con el campo contraseña del alias",
+		"undefined": "Sin definir",
+		"nameless": "Esta App no posee un nombre...",
+		"select": "Seleccione",
+		"no_results": "No hay resultados.",
+        "save": "Guardar",
+        "add": "Agregar",
+        "update": "Actualizar"
+	},
+	"app": {
+		"login_route": "Iniciar Sesión",
+		"register_route": "Registro",
+		"continue_route": "Continúa con tu registro",
+		"confirm_token_route": "Confirmar Registro de Usuario",
+		"password_reset": "Reestablecer contraseña",
+		"set_new_password": "Generar nueva contraseña"
+	},
+	"default_header": {
+		"settings_button": "Configuración",
+		"profile_button": "Perfíl",
+		"logout_button": "Cerrar sesión",
+		"generator": "Generador",
+		"select_your_plan": "Selecciona tu Plan",
+		"breadcrumb": {
+			"user_profile": "Perfil de usuario"
+		}
+	},
+	"routes": {
+		"default_layout": "Inicio",
+		"custom_with_tour": "Generador de Aplicaciones",
+		"user_profile": "Perfíl de Usuario",
+		"dashboard": "Panel Principal",
+		"table_users_views": "Tabla de Usuarios",
+		"table_apps_views": "Tabla de Aplicaciones",
+		"category": "Categoría",
+		"app": "App",
+		"create_template": "Crear Plantilla",
+		"edit_template": "Actualizar Plantilla",
+		"create_layout": "Crear Diseño",
+		"edit_layout": "Actualizar Diseño",
+		"section": "Sección",
+		"edit_app": "Actualizar App",
+		"customer_info": "Información del Cliente",
+		"email_builder": "Plantillas de Correos",
+		"continue_register": "Continuar registro",
+		"log_admin": "Acciones de administradores"
+	},
+	"color_picker_data": {
+		"custom_tab": "Personalizado",
+		"material_tab": "Material",
+		"more": "Ver más",
+		"recommend" : "No recomendamos este color por ser muy claro. Puede dificultar la lectura."
+	},
+	"custom": {
+		"theme": "Temas",
+		"colors": "Colores",
+		"color_selection": "Selecciona la paleta de colores para tu App",
+		"font_selection": "Selecciona la fuente para tu App",
+		"fonts": "Fuentes",
+		"icons_logos": "Logos e imágenes",
+		"key_store": "Certificado",
+		"map_store": "Mapa",
+		"select_app_type": "Selecciona el sistema operativo de tu App",
+		"select_theme": "Selecciona tu tema",
+		"select_navigation": "Elige un estilo para tu menú de navegación",
+		"drawer_menu": "Menú Lateral",
+		"tab_menu": "Menú Inferior",
+		"primary_color": "Color Primario",
+		"light_primary": "Primario Claro",
+		"dark_primary": "Primario Oscuro",
+		"color_accent": "Color de Énfasis",
+		"icons_themes": "Temas de Iconos",
+		"light": "Claro",
+		"dark": "Oscuro",
+		"company_logo": "Logo de la compañía",
+		"company_logo_description": "Debes subir el logo de tu compañía. Este logo lo usaremos en toda la plataforma.",
+		"logo_input_text": "Subir logo...",
+		"logo_input_details": "Te recomendamos que subas archivos PNG con las medidas 180x60, menores a: 200kb",
+		"icon_app": "Icono de la App",
+		"ios_icon_app": "Icono de la App IOs",
+		"icon_app_description": "Debes subir el ícono de tu App. Este será el icono de  que verán tus usuarios en las tiendas de descarga y en sus dispositivos al instalar la App.",
+		"icon_input_text": "Subir icono...",
+		"icon_input_details": "Te recomendamos que subas archivos PNG con las medidas 1024x1024, menores a: 200kb",
+		"header_logo": "Logo de cabecera de la App",
+		"header_logo_description": "Debes subir el logo para la cabecera de la App. Este es el logo que se mostrará en el header de tu App.",
+		"header_input_text": "Subir logo de la cabecera...",	
+		"header_logo_details": "Te recomendamos que subas archivos PNG con las medidas 812x224, menores a: 200kb",
+		"logo_splash_screen": "Logo de la pantalla de bienvenida",
+		"logo_splash_screen_description": "Debes subir la imagen para el inicio de tu App. Esta imagen se mostrará en la pantalla de bienvenida de tu App.",
+		"logo_splash_screen_text": "Subir logo de bienvenida...",
+		"logo_splash_screen_details": "Te recomendamos que subas archivos PNG con las medidas 600x600, menores a: 200kb",
+		"title_produc": "Selecciona un plan acorde a tus necesidades",
+		"sub_title_prod": "",
+		"sub_title_error_1" : "Información de la App",
+		"title_congratulation" : "Felicitaciones! tu aplicación está en verificación",
+		"text_congratulation" : "Nuestro equipo en estos momentos se encuentra procesando todo lo que corresponde a la generación de tu producto.",
+		"title_congratulation_demo" : "Felicitaciones! tu demo fue generado con éxito",
+		"text_congratulation_demo" : "Te hemos enviado un correo electrónico con el acceso a tu App de prueba",
+		"btn_congratulation" : "Regresar",
+		"empty_prototype": "No tiene ningun prototipo seleccionado",
+		"more_data": "Necesitamos más datos",
+		"icom_map_one": "Selecciona el ícono de tu distribuidor",
+		"icom_map_two": "Selecciona el icono de tu cliente en el mapa",
+		"domain": "Dominio de tu APP",
+		"transport": "Ubicación de transporte y pin",
+		"map_suggest": "Debemos conectar tu App con un proveedor de mapas, rutas y lugares y usted debe pagar los costos de estos servicios directamente a los proveedores. Nosotros recomendamos Google Maps Platform o Mapbox.",
+		"discard": "Descartar",
+		"error_img_1": "La imagen debe tener las medidas: ",
+		"error_img_2": "Las medidas deben ser: ",
+		"paid_out_title": "Ya has pagado tu App",
+		"finish_app_data": "Para enviar tu App debes llenar los campos necesarios restantes",
+		"unavailable_icon_change": "El cambio de los íconos no está disponible en el demo.",
+		"client_map_icon": "Este será el ícono que representará la ubicación del cliente al que se le entregará la orden.",
+		"provider_map_icon": "Este ícono representará la ubicación del proveedor que entregará la orden.",
+		"tabs": {
+			"device_os": "Tu App puede ser desarrollada para dispositivos Android y/o iOS. Escoge la plataforma en la que deseas que se desarrolle tu App.",
+			"theme": "En el selector te presentamos los distintos temas que tenemos a disposición para la personalización de tu App.",
+			"color_palette": "El tema seleccionado dispone de una paleta de colores la cual puedes cambiar según lo desees. Puedes usar una de nuestras paletas predeterminadas o personalizar los colores según tus preferencias.",
+			"font": "En el selector te presentamos las opciones de fuente que tenemos a disposición para la personalización de tu App. Además puedes seleccionar el color de la fuente.",
+			"icon": "Selecciona el tema de íconos que deseas usar en toda tu App. Además puedes seleccionar el color que tendrán los íconos.",
+			"keystore": "Ingresa los datos necesarios para subir tu App a la tienda correspondiente."
+		},
+		"keystore": {
+			"key_password": {
+				"text": "Contraseña del certificado",
+				"help": {
+					"title": "Acerca de la contraseña del certificado",
+					"content": "Genera y confirma una contraseña segura para tu certificado"
+				}
+			},
+			"confirm_key_password": {
+				"text": "Confirmar contraseña del certificado",
+				"help": {
+					"title": "Acerca de la contraseña del certificado",
+					"content": ""
+				}
+			},
+			"alias": {
+				"text": "Alias",
+				"help": {
+					"title": "Acerca del alias",
+					"content": "Nombre de identificación para tu clave"
+				}
+			},
+			"alias_password": {
+				"text": "Contraseña del alias",
+				"help": {
+					"title": "Acerca de la contraseña del alias",
+					"content": "Genera y confirma una contraseña segura para tu clave. Esta debe ser diferente de la contraseña que elegiste para tu certificado"
+				}
+			},
+			"confirm_alias_password": {
+				"text": "Confirmar contraseña del alias",
+				"help": {
+					"title": "Acerca de la contraseña del alias",
+					"content": ""
+				}
+			},
+			"first_and_last_name": {
+				"text": "Primer nombre y apellido",
+				"help": {
+					"title": "Acerca del primer nombre y apellido",
+					"content": "Primer nombre y primer apellido"
+				}
+			},
+			"organizational_unit": {
+				"text": "Unidad organizacional",
+				"help": {
+					"title": "Acerca de la unidad organizacional",
+					"content": "Nombre del departamento donde trabaja"
+				}
+			},
+			"organization": {
+				"text": "Organización",
+				"help": {
+					"title": "Acerca de la organización",
+					"content": "Nombre de la organizacion donde trabaja"
+				}
+			},
+			"city_or_locality": {
+				"text": "Ciudad o localidad",
+				"help": {
+					"title": "Acerca de la cuidad o localidad",
+					"content": "Nombre de la Ciudad donde se ubica tu lugar de trabajo"
+				}
+			},
+			"state_or_providence": {
+				"text": "Estado o providencia",
+				"help": {
+					"title": "Acerca del estado o providencia",
+					"content": "Estado o providencia donde se ubica tu lugar de trabajo"
+				}
+			},
+			"country_code": {
+				"text": "País",
+				"help": {
+					"title": "Acerca del país",
+					"content": "País donde se ubica tu lugar de trabajo"
+				}
+			},
+			"errors": {
+				"match": {
+					"message": "No coincide con ",
+					"key_password": "contraseña",
+					"key_password_confirm": "confirmacion de contraseña del certificado",
+					"alias_password": "contraseña del alias",
+					"alias_password_confirm": "confirmacion de contraseña del alias"
+				}
+			}
+		},
+        "icons": {
+            "title": "Temas de iconos"
+        }
+	},
+	"email_builder": {
+		"subject": "Asunto",
+		"title": "Título"
+	},
+	"login": {
+		"title": "Iniciar Sesión",
+		"sub_title": "Ingresa tus credenciales en el formulario",
+		"email": "Correo",
+		"password": "Contraseña",
+		"password_forgotten_link": "¿Olvidaste tu contraseña?",
+		"sign_in": "Iniciar Sesión",
+		"sign_up": "Registrarse",
+		"signup_message": "Si aún no tienes una cuenta, puedes unirtenos para vivir la experiencia OnDemand"
+	},
+	"recover": {
+		"title": "Recupera tu cuenta",
+		"subtitle": "Escribe tu correo electrónico y te enviaremos un email para iniciar sesión",
+		"email": "Correo",
+		"post_send": {
+			"title": "Tranquilo!",
+           	"subtitle": "No te preocupes, obtendrás una nueva contraseña.",
+           	"subtitle_1": "Por favor confirma tu correo y presiona el enlace  enviado para crear tu nueva contraseña"
+		},
+		"buttons": {
+			"send": "Enviar",
+			"login": "Iniciar sesión"
+		}
+	},
+	"app_builder": {
+		"create_title": "CREAR",
+		"company_name": "Nombre de la Compañía",
+		"select_category": "Elíge una categoría",
+		"app_name": "Nombre de la App",
+		"address": "Dirección",
+		"description": "Descripción",
+		"webpage": "Página Web",
+		"phone": "Teléfono",
+		"email": "Correo",
+		"app_for_user_question": "Esta App es para un usuario?",
+		"admin_only_question": "Opción disponible solo para el Administrador",
+		"deliveries_month": "Entregas por mes",
+		"country_code": "Código del País",
+		"zip_code": "Código Zip"
+	},
+	"category": {
+		"create": "Crear Categoría",
+		"update": "Actualizar Categoría",
+		"default_select": "Ninguna",
+		"name": "Nombre (Ingles)",
+		"name_es": "Nombre (Español)",
+		"list_delete": "Listar / Eliminar",
+		"buttons": {
+			"create": "Crear",
+			"update": "Actualizar",
+			"delete": "Eliminar"
+		}
+	},
+	"edit_app": {
+		"select_category": "Categoría",
+		"select_category_placeholder": "Elíge una categoría",
+		"app_name": "Nombre",
+		"addresss": "Dirección",
+		"description": "Descripción",
+		"web_page": "Página Web",
+		"phone": "Teléfono",
+		"email": "Correo",
+		"app_for_user_question": "Esta App es para un usuario?",
+		"admin_only_question": "Opción disponible solo para el Administrador",
+		"country_code": "Código del País",
+		"zip_code": "Código Zip"
+	},
+	"users": {
+		"form_title_part1": "Elementos del ",
+		"form_title_part2": "Formulario Básico",
+		"statics_title": "Estáticos",
+		"user": "Usuario",
+		"text_input": "Input de Texto",
+		"help_text": "Este es un texto de ayuda",
+		"email_input": "Input de Correo",
+		"email_input_placeholder": "Ingrese Correo",
+		"help_email": "Por favor ingresa tu correo",
+		"password_input": "Contraseña",
+		"password_input_placeholder": "Contraseña",
+		"help_password": "Por favor ingrese una contraseña"
+	},
+	"customer_profile": {
+		"title": "Información del usuario",
+		"title_1": "Información de ingreso y contacto",
+		"title_2": "Gestión de contraseñas",
+		"first_name": "Nombre",
+		"last_name": "Apellido",
+		"full_name": "Nombre completo",
+		"pass" : "Ingresa tu contraseña actual ",
+		"new_pass" : "Nueva contraseña",
+		"confirm_pass" : "Confirma tu nueva contraseña",
+		"new_email": "Nuevo correo electrónico",
+		"confirm_email": "Confirma tu correo electrónico nuevo"
+	},
+	"user_nav": {
+		"dashboard_link": "Panel Principal",
+		"badge": "NUEVO",
+		"prototype_builder_link": "Generador de Prototipos"
+	},
+	"_nav": {
+		"dashboard_link": "Panel Principal",
+		"prototype_builder_link": "Generador de Prototipos",
+		"users_link": "Usuarios",
+		"apps_link": "Aplicaciones",
+		"prototype_link": "Prototipos",
+		"model_link": "Modelos",
+		"category_link": "Categoría",
+		"app_link": "App",
+		"layout_link": "Diseño",
+		"create_link": "Crear",
+		"update_link": "Actualizar",
+		"section_link": "Sección",
+		"templates_link": "Plantillas",
+		"email_builder_link": "Plantillas de Correos",
+		"log_admin" : "Actions of Admin",
+		"log_demo" : "Demos requested",
+		"log_Login" : "Log de Login"
+	},
+	"page_404": {
+		"title": "Uups! Estas perdido.",
+		"message": "La página que buscas no fue encontrada."
+	},
+	"page_500": {
+		"title": "Houston, tenemos un problema!",
+		"message": "La página que buscas está temporalmente no disponible"
+	},
+	"customer_info": {
+		"first_name": "Nombre",
+		"last_name": "Apellido",
+		"email": "Correo",
+		"created_at": "Creado el",
+		"is_admin": "Administrador",
+		"is_active": "Activo",
+		"user_details": "Datos de usuario",
+		"applications": "Aplicaciones",
+		"app_prototypes": "Prototipos de la App",
+		"buttons": {
+			"update": "Actualizar"
+		}
+	},
+	"register":{
+		"title": "Regístrate",
+		"subtitle": "Debes llenar el formulario con tus datos.",
+		"signin_message": "Si tienes una cuenta, inicia sesión y construye tu App.",
+		"success_message": "Please check your inbox to verify your account",
+		"success_description": "We sent you a email, just follow the easy instructions.",
+		"first_name": "Nombre",
+		"last_name": "Apellido",
+		"email": "Correo",
+		"phone_code": "Código del Teléfono",
+		"phone_input": "Número de telefóno",
+		"company_name_input": "Nombre de Compañía",
+		"category_input": "Selecciona una Categoría",
+		"deliveries_per_month": "Cantidad de entregas al mes",
+		"continue_button": "Continuar",
+		"back_button": "Regresar",
+		"login_button": "Iniciar sesión",
+		"email_your_verify" : "Por favor revisa tu bandeja de correo para verificar tu cuenta",
+		"resend_e_mail" : "No he recibido el correo electrónico",
+		"domain_title" : "Crea un dominio para tu negocio.",
+		"domain_text" : "Este nombre será usado para que tu y tu equipo puedan administrar tus aplicaciones y negocio. Suele estar asociado al nombre de la compañía o al tipo de comercio.",
+		"type_of_item_title" : "Qué tipo de comercio gestonará tu App?",
+		"type_of_item_text": "Selecciona la actividad comercial para la cual desarrollarás tus Apps."
+	},
+	"continue": {
+		"business": "Tu Negocio",
+		"needed_fields": "Cuéntanos un poco sobre tu negocio.",
+		"keystore_title": "Tu certificado",
+		"needed_keystore_fields": "Ahora necesitamos algunos datos para tu App",
+		"marked_fields": "Por favor corrija los campos marcados...",
+		"app_name": "Nombre para la App",
+		"address": "Dirección",
+		"description": "Descripción",
+		"website": "Sitio Web del negocio",
+		"phone": "Teléfono",
+		"email": "Correo de soporte",
+		"deliveries_month": "Entregas por mes",
+		"country_code": "País",
+		"zip_code": "Código postal",
+		"buttons": {
+			"skip": "Saltar",
+			"next": "Continuar",
+			"confirm": "Confirmar",
+			"back": "Regresar"
+		},
+		"placeholders": {
+			"website": "https://www.tusitioweb.com",
+			"phone": "+00 000 0000000"
+		}
+	},
+	"notifications": {
+		"default_msg_error": "Ha ocurrido un error inesperado, intentaremos que no suceda de nuevo.",
+		"mss_device": "Esta App no se generará para ",
+		"spam_verify": "El email con tu demo podria llegar a tu bandeja de spam",
+		"company_already_created": "La compañía ya ha sido creada"
+	},
+	"default_layout": {
+		"btn_generate": "Envía tu Prototipo",
+		"btn_success_generate": "Tu App se encuentra en proceso de verificación",
+		"go_to_company": "Ir a la compañía: "
+	},
+	"user_profile": {
+		"tabs": {
+			"user": "Usuario",
+			"app": "App",
+			"key": "Certificado"
+		},
+		"user": {
+			"first_name": "Primer Nombre",
+			"last_name": "Primer Apellido",
+			"email": "Correo"
+		},
+		"app": {
+			"company_name": "Nombre de la Compañía",
+			"name": "Nombre de la App",
+			"category": "Categoría",
+			"website": "Sitio Web del negocio",
+			"address": "Dirección",
+			"description": "Descripción",
+			"phone": "Número telefónico",
+			"email": "Correo",
+			"deliveries_month": "Entregas por mes",
+			"country_code": "País",
+			"zip_code": "Código postal"
+		},
+		"placeholders": {
+			"website": "https://www.tusitioweb.com",
+			"phone": "+00 000 0000000",
+            "select_category": "Seleccione una categoría"
+		},
+		"keystore": {
+			"key_password": "Contraseña de certificado",
+			"confirm_key_password": "Confirmar contraseña de certificado",
+			"alias": "Alias",
+			"alias_password": "Contraseña del alias",
+			"confirm_alias_password": "Confirmar contraseña del alias",
+			"first_and_last_name": "Primer nombre y apellido",
+			"organizational_unit": "Unidad organizacional",
+			"organization": "Organización",
+			"city_or_locality": "Ciudad o ubicación",
+			"state_or_providence": "Estado o providencia",
+			"country_code": "País",
+			"default_mobile_language": "Selecciona el lenguaje por defecto para tu App",
+			"language": {
+				"es": "Español",
+				"en": "Ingles"
+			}
+		},
+		"buttons": {
+			"save": "Guardar"
+		}
+	},
+	"dataerror": {
+		"titles": {
+			"app_info": "Datos de la App",
+			"images": "Imágenes",
+			"design_data": "Datos de diseño a pedido del consumidor",
+			"prototype": "Prototipo"
+		},
+		"prototype": "No tiene un prototipo creado",
+		"icon_app": "Debes llenar el campo: Android Icon para launcher",
+		"ios_icon_app": "Debes llenar el campo: Apple iOS para launcher",
+		"logo_app": "Debes llenar el campo: Icono de la compañía",
+		"header_logo": "Debes llenar el campo: Logo de Cabecera",
+		"splash_logo": "Debes llenar el campo: Splash Logo",
+		"metadata": "Debes llenar los campos del certificado",
+		"first_name": "Debes llenar el campo: Nombre",
+		"last_name": "Debes llenar el campo: Apellido",
+		"email": "Debes llenar el campo: Email",
+		"address": "Debes llenar el campo: Dirección",
+		"country_code": "Debes llenar el campo: País",
+		"description": "Debes llenar el campo: Descripción",
+		"name": "Debes llenar el campo: Nombre de la App",
+		"phone": "Debes llenar el campo: Teléfono",
+		"website": "Debes llenar el campo: Sitio web",
+		"zip_code": "Debes llenar el campo: Código postal",
+		"company_name": "Debes llenar el campo: Nombre de compañía",
+		"category_id": "Debes llenar el campo: Categoría",
+		"deliveries_month": "Debes llenar el campo: Entregas por mes",
+		"alias": "Debes llenar el campo: Alias",
+		"key_password": "Debes llenar el campo: Contraseña",
+		"alias_password": "Debes llenar el campo: Contraseña del alias",
+		"organization": "Debes llenar el campo: Organización",
+		"organizational_unit": "Debes llenar el campo: Unidad organizacional",
+		"city_or_locality": "Debes llenar el campo: Ciudad o localidad",
+		"state_or_providence": "Debes llenar el campo: Estado o providencia",
+		"first_and_last_name": "Debes llenar el campo: Primer nombre y apellido",
+		"key_password_confirm": "Debes llenar el campo: Contraseña del certificado",
+		"alias_password_confirm": "Debes llenar el campo: Contraseña del alias"
+	},
+	"tableUsers": {
+		"first_name": "Nombre",
+		"last_name": "Apellido",
+		"email": "Correo electrónico",
+		"is_admin": "Administrador",
+		"created_at": "Creado el"
+	},
+	"modal": {
+		"cancel" : "Cancelar",
+		"ok": "De acuerdo",
+		"reject_reason": "Especifique las razones para rechazar este prototipo",
+		"reject_text_help": "Presione enter para separar cada razón"
+	},
+	"status":{
+		"the_status_is": "El estado es:",
+		"0": "Borrador",
+		"1" : "Borrador",
+		"2": "Listo para enviar",
+		"3": "Enviado",
+		"4": "En revisión",
+		"5": "Aprobado",
+		"6": "Rechazado",
+		"7": "En proceso",
+		"8": "Listo para publicar",
+		"9": "Publicado",
+		"generate_a_test_app": "Descarga tu Demo"
+	},
+	"joyride": {
+		"themes": "Selecciona el tema para el diseño de tu App y elige para cual plataforma quieres que se desarrolle (Android y/o iOS).",
+		"themes2": "Este selector te permitirá escoger el tema que mejor se adapte a los servicios  y/o productos que ofrece tu negocio.",
+		"colors": "Esta sección te permite elegir la paleta de colores que utilizará tu App.",
+		"fonts": "Elige la fuente que deseas para los textos de tu App y personaliza su color.",
+		"images": "En esta pestaña deberás proporcionarnos en las medidas indicadas, las imágenes que necesitamos para personalizar tu App.",
+		"maps": "Personaliza tu mapa seleccionando los iconos que deseas mostrar en tu App.",
+		"icons": "Selecciona el tema de íconos que deseas para la personalización de tu App.",
+		"keystore": "En esta pestaña deberás proporcionarnos los datos que se requieren para subir tu App a la tienda correspondiente.",
+		"buttons": {
+			"close": "Siguiente",
+			"back": "Regresar",
+			"last": "Ultimo",
+			"next": "Siguiente",
+			"skip": "Saltar"
+		}
+	},
+	"notme": {
+		"in_process": "Estamos desvinculando tus datos de la cuenta...",
+		"success": "Desvinculación completada con éxito",
+		"error": "La cuenta no pudo ser desvinculada"
+	},
+    "payment": {
+        "pay_button": "Seleccione",
+		"upgrade": "Mejorar"
+    }
+}

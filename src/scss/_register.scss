@@ -1,0 +1,35 @@
+
+body.democlass {
+	background-color: #FFF;
+	@media (max-width: 500px) {
+		.container{
+			padding-top: 104px;
+		}
+	}
+}
+
+.header-register {
+	background-color: unset;
+	text-align: center;
+}
+
+.footer-register {
+	background-color: unset;
+}
+
+.tab-content {
+	border: none;
+	margin-top: 0;
+}
+
+.card {
+	border: none;
+}
+
+.confirm-email {
+	background-color: #FFF;
+}
+
+.step-body{
+	margin: 0;
+}
