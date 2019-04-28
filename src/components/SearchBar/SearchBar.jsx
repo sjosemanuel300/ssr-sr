@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import store from '../../store/store';
 import {DropdownItem, Button, Input, InputGroup, InputGroupAddon } from 'reactstrap';
-import PropTypes from 'prop-types';
 import TemplateDropdown from './TemplateDropdown.jsx';
 
 var json_lang = store.getState().clientReducer.json_lang;
@@ -66,7 +65,7 @@ export default class SearchBar extends Component {
         return (
             <div className="content-seach">
             <InputGroup className="search">
-                <Input type="text" name="searchValue" placeholder={ this.props.placeholder } onKeyUp={ (e) => this.onSearchChange(e) } />
+                <Input type="text" name="searchValue" placeholder={ json_lang.tableUsers.first_name } onKeyUp={ (e) => this.onSearchChange(e) } />
                 <div className="input-group select-group">
                     <TemplateDropdown name={this.state.selectValue}>
                         { obj.map( (templates, key) => {
@@ -74,7 +73,7 @@ export default class SearchBar extends Component {
                         }) }
                     </TemplateDropdown>
                 </div>
-                <Input type="number" name="searchValueNum" placeholder={ this.props.placeholder2 } onKeyUp={ (e) => this.onSearchChange(e) } />
+                <Input type="number" name="searchValueNum" placeholder={ json_lang.tableUsers.age } onKeyUp={ (e) => this.onSearchChange(e) } />
                 <InputGroupAddon addonType="append">
                     <Button type="button" color="link" onClick={ () => this.props.refreshList(this.state) }><i className="icon-magnifier icons font-2xl"/></Button>
                     <Button type="button" color="link" onClick={ () => this.onRemoveIconClick } >
@@ -86,7 +85,3 @@ export default class SearchBar extends Component {
         )
     }
 }
-
-SearchBar.defaultProps = {
-    placeholder: json_lang.common.search_placeholder
-};

@@ -1,561 +1,67 @@
 {
-	"validation_keys": {
-		"first_name": "first name",
-		"last_name": "last name",
-		"company_name": "company name",
-		"category_id": "category"
-	},
-	"buttons": {
-		"add": "Add",
-		"create": "Create",
-		"save": "Save",
-		"delete": "Delete",
-		"edit": "Edit",
-		"update": "Update",
-		"fix": "Fix",
-		"search": "Search",
-		"confirm": "Confirm"
-	},
-	"common": {
-		"waiting_message": "Please wait...",
-		"search_placeholder": "Search...",
-		"search_button": "Search",
-		"select_placholder": "Select one...",
-		"key_password_dont_match": "Don't match with key password field",
-		"alias_password_dont_match": "Don't match with key alias password field",
-		"undefined": "Undefined",
-		"nameless": "This application does not have a name...",
-		"select": "Select",
-		"no_results": "There is no results.",
-		"save": "Save",
-		"add": "Add",
-		"update": "Update"
-	},
-	"app": {
-		"login_route": "Log in",
-		"register_route": "Sign up",
-		"continue_route": "Continue with your sign up",
-		"confirm_token_route": "Confirm User sign up",
-		"password_reset": "Password Reset",
-		"set_new_password": "Generate new password"
-	},
-	"default_header": {
-		"settings_button": "Settings",
-		"profile_button": "Profile",
-		"logout_button": "Log out",
-		"generator": "Generator",
-		"select_your_plan": "Select your Plan",
-		"breadcrumb": {
-			"user_profile": "User Profile"
-		}
-	},
-	"routes": {
-		"default_layout": "Home",
-		"custom_with_tour": "App Builder",
-		"user_profile": "User Profile",
-		"dashboard": "Dashboard",
-		"table_users_views": "Users's Table",
-		"table_apps_views": "App's Table",
-		"category": "Category",
-		"app": "App",
-		"create_template": "Create Template",
-		"edit_template": "'Update Template",
-		"create_layout": "Create Layout",
-		"edit_layout": "Update Layout",
-		"section": "Section",
-		"edit_app": "Update App",
-		"customer_info": "Customer Information",
-		"email_builder": "Email Templates",
-		"continue_register": "Continue Registration"
-	},
-	"color_picker_data": {
-		"custom_tab": "Custom",
-		"material_tab": "Material",
-		"more": "More",
-		"recommend" : "We do not recommend this color because it is very clear. It can make reading difficult."
-	},
-	"custom": {
-		"theme": "Themes",
-		"colors": "Colors",
-		"color_selection": "Select the color palette for your App",
-		"font_selection": "Select the font for your App",
-		"fonts": "Fonts",
-		"icons_logos": "Logos & images",
-		"key_store": "Key store",
-		"map_store": "Map",
-		"select_app_type": "Select your application's operative system",
-		"select_theme": "Select your theme",
-		"icons_themes": "Icon themes",
-		"select_navigation": "Select navigation",
-		"drawer_menu": "Drawer Menu",
-		"tab_menu": "Tab Menu",
-		"primary_color": "Primary Color",
-		"light_primary": "Light Primary",
-		"dark_primary": "Dark Primary",
-		"color_accent": "Accent Color",
-		"light": "Light",
-		"dark": "Dark",
-		"company_logo": "Company logo",
-		"company_logo_description": "You must upload the logo of your company. This logo will be used throughout the platform.",
-		"logo_input_text": "Upload logo...",
-		"logo_input_details": "We recommend you to upload PNG files with the 180x60 measurements, less than: 200kb",
-		"icon_app": " App icon",
-		"ios_icon_app": "IOs Icon",
-		"icon_app_description": "You must upload the icon of your App. This will be the icon that your users will see in the download stores and on their devices install the App.",
-		"icon_input_text": "Upload icon...",
-		"icon_input_details": "We recommend you to upload PNG files with the 1024x1024 measurements, less than: 200kb",
-		"header_logo": "App header logo",
-		"header_logo_description": "You must upload the logo for the header of the App. This is the logo that will be displayed in the header of your App.",
-		"header_input_text": "Upload header logo...",
-		"header_logo_details": "We recommend you to upload PNG files with the 812x224 measurements, less than: 200kb",
-		"logo_splash_screen": "Splash screen logo",
-		"logo_splash_screen_description": "You must upload the image for the start of your App. This image will be displayed on the Welcome screen of your App.",
-		"logo_splash_screen_text": "Upload splash screen logo...",
-		"logo_splash_screen_details": "We recommend you to upload PNG files with the 600x600 measurements, less than: 200kb",
-		"title_produc": "Select the plan according to your needs",
-		"sub_title_prod": "",
-		"sub_title_error_1" : "App information",
-		"title_congratulation" : "Congratulations! your application is in verification",
-		"text_congratulation" : "Our team is currently processing everything that corresponds to the generation of your product.",
-		"title_congratulation_demo" : "Congratulations! your demo was successfully generated",
-		"text_congratulation_demo" : "We have sent you an email with access to your trial app",
-		"btn_congratulation" : "Return",
-		"empty_prototype": "You does not have any selected prototype yet",
-		"more_data": "We need more data",
-		"icom_map_one": "Select the icon of your dealer",
-		"icom_map_two": "Select your client's icon on the map",
-		"domain": "Domain of your App",
-		"transport": "Transport and pin location",
-		"map_suggest": "We must connect your app with a provider of maps, routes and places and you must pay the costs of these services directly to the providers. We recommend Google Maps Platform or Mapbox.",
-		"discard": "Discard",
-		"error_img_1": "The measures of the image must be: ",
-		"error_img_2": "The measures must be: ",
-		"paid_out_title": "You have already paid your App",
-		"finish_app_data": "To send your App you must fill in the remaining necessary fields",
-		"unavailable_icon_change": "The change of the icons is not available in the demo.",
-		"client_map_icon": "This will be the icon that will represent the location of the client to whom the order will be delivered.",
-		"provider_map_icon": "This icon will represent the location of the provider that will deliver the order.",
-		"tabs": {
-			"device_os": "Your App can be developed for Android and / or iOS devices. Choose the platform on which you want your App to develop.",
-			"theme": "In the selector we present the different topics that we have available for the customization of your App.",
-			"color_palette": "The selected theme has a color palette which you can change as you wish. You can use one of our default palettes or customize the colors according to your preferences.",
-			"font": "In the selector we present you the font options that we have available for the customization of your App. You can also select the color of the font.",
-			"icon": "Select the theme of icons you want to use throughout your App. You can also select the color icons will have.",
-			"keystore": "Enter the necessary data to upload your App to the corresponding store."
-		},
-		"keystore": {
-			"key_password": {
-				"text": "Key password",
-				"help": {
-					"title": "About key password",
-					"content": "Generate and confirm a secure password for your keystore"
-				}
-			},
-			"confirm_key_password": {
-				"text": "Confirm key password",
-				"help": {
-					"title": "About confirm key password",
-					"content": ""
-				}
-			},
-			"alias": {
-				"text": "Alias",
-				"help": {
-					"title": "About alias",
-					"content": "Identification name for your password"
-				}
-			},
-			"alias_password": {
-				"text": "Alias password",
-				"help": {
-					"title": "About alias password",
-					"content": "Generate and confirm a secure password for your password. This must be different from the password you chose for your keystore"
-				}
-			},
-			"confirm_alias_password": {
-				"text": "Confirm alias password",
-				"help": {
-					"title": "About confirm alias password",
-					"content": ""
-				}
-			},
-			"first_and_last_name": {
-				"text": "First and last name",
-				"help": {
-					"title": "About first and last name",
-					"content": "First name and last name"
-				}
-			},
-			"organizational_unit": {
-				"text": "Organizational unit",
-				"help": {
-					"title": "About organizational unit",
-					"content": "Name of the department of your company where you work"
-				}
-			},
-			"organization": {
-				"text": "Organization",
-				"help": {
-					"title": "About organization",
-					"content": "Name of the organization where you work"
-				}
-			},
-			"city_or_locality": {
-				"text": "City or locality",
-				"help": {
-					"title": "About city or locality",
-					"content": "Name of the city where your workplace is located"
-				}
-			},
-			"state_or_providence": {
-				"text": "State or providence",
-				"help": {
-					"title": "About state or providence",
-					"content": "State or providence where your place of work is located"
-				}
-			},
-			"country_code": {
-				"text": "Country",
-				"help": {
-					"title": "About country",
-					"content": "Country where your workplace is located"
-				}
-			},
-			"errors": {
-				"match": {
-					"message": "Don't match with ",
-					"key_password": "key password",
-					"key_password_confirm": "confirm key password",
-					"alias_password": "alias password",
-					"alias_password_confirm": "confirm alias password"
-				}
-			}
-		},
-		"icons": {
-			"title": "Icon Themes"
-		}
-	},
-	"email_builder": {
-		"subject": "Subject",
-		"title": "Title"
-	},
-    "users": {
-        "form_title_part1": "Elements of ",
-        "form_title_part2": "Basic form",
-        "statics_title": "Static",
-        "user": "User",
-        "text_input": "Text input",
-        "help_text": "this is a help text",
-        "email_input": "Email input",
-        "email_input_placeholder": "Input your email",
-        "help_email": "Please input your email",
-        "password_input": "Password",
-        "password_input_placeholder": "Password",
-        "help_password": "Please input your password"
+    "buttons":{
+        "add":"Add",
+        "create":"Create",
+        "save":"Save",
+        "delete":"Delete",
+        "edit":"Edit",
+        "update":"Update",
+        "fix":"Fix",
+        "search":"Search",
+        "confirm":"Confirm"
     },
-	"customer_profile": {
-		"title": "User information",
-		"title_1": "Entry and contact information",
-		"title_2": "Password management",
-		"first_name": "First Name",
-		"last_name": "Last Name",
-		"new_email": "Your Email new",
-		"confirm_email": "Confirm your Email new",
-		"full_name": "Full name",
-		"pass" : "Enter your current password",
-		"new_pass" : "New password",
-		"confirm_pass" : "Confirm your new password"
-	},
-	"user_nav": {
-		"dashboard_link": "Dashboard",
-		"badge": "NEW",
-		"prototype_builder_link": "Prototype Generator"
-	},
-	"_nav": {
-		"dashboard_link": "Dashboard",
-        "prototype_builder_link": "Prototypes Generator",
-		"users_link": "Users",
-		"apps_link": "Apps",
-		"prototype_link": "Prototype",
-		"model_link": "Model",
-		"category_link": "Category",
-		"app_link": "App",
-		"layout_link": "Layout",
-		"create_link": "Create",
-		"update_link": "Update",
-		"section_link": "Section",
-		"templates_link": "Templates",
-		"email_builder_link": "Email Builder",
-		"log_admin" : "Actions of Admin",
-		"log_demo" : "Demos requested",
-		"log_Login" : "Login Log"
-	},
-	"page_404": {
-		"title": "Oops! You are lost.",
-		"message": "The page your looking couldn't be found."
-	},
-	"page_500": {
-		"title": "Houston, we have a problem!",
-		"message": "The page your looking is temporarily unavailable"
-	},
-	"customer_info": {
-		"first_name": "First name",
-		"last_name": "Last name",
-		"email": "Email",
-		"created_at": "Created at",
-		"is_admin": "Admin",
-		"is_active": "Active",
-        "user_details": "User details",
-		"applications": "User apps",
-		"app_prototypes": "App prototypes",
-        "buttons": {
-            "update": "Update"
+    "default_header":{
+        "settings_button":"Settings",
+        "profile_button":"Profile",
+        "logout_button":"Log out",
+        "generator":"Generator",
+        "select_your_plan":"Select your Plan",
+        "breadcrumb":{
+            "user_profile":"User profile"
         }
-	},
-	"register":{
-		"title": "Sign up",
-		"subtitle": "you must fill up this form with your information",
-		"signin_message": "If you already have an account, log in and build your App",
-		"success_message": "Please check your inbox to verify your account",
-		"success_description": "We sent you a email, just follow the easy instructions.",
-		"first_name": "First Name",
-		"last_name": "Last Name",
-		"email": "Email",
-		"phone_code": "Phone code",
-		"phone_input": "Phone Number",
-		"company_name_input": "Company Name",
-		"category_input": "Select a Category",
-		"deliveries_per_month": "Deliveries per month",
-		"continue_button": "Continue",
-		"back_button": "Back",
-		"login_button": "Login",
-		"email_your_verify" : "Please check your mailbox to verify your account",
-		"resend_e_mail" : "I have not received the email",
-		"domain_title" : "Create the name of your App",
-		"domain_text" : "This name will be used for your customers to find the App. It is usually associated with the name of the company or the type of trade.",
-		"type_of_item_title" : "What kind of commerce will your App handle?",
-		"type_of_item_text": "Select the commercial activity for which you will develop your App."
-	},
-	"continue": {
-		"business": "Your Business",
-		"needed_fields": "Now we need more information about your business",
-		"keystore_title": "Your Key Store",
-		"needed_keystore_fields": "Now we need more information to build your app",
-		"marked_fields": "Please fix the given fields...",
-		"app_name": "App name",
-		"address": "Address",
-		"description": "Description",
-		"website": "Website",
-		"phone": "Phone",
-		"email": "Support email",
-		"deliveries_month": "Deliveries per month",
-		"country_code": "Country",
-		"zip_code": "Zip code",
-		"buttons": {
-			"skip": "Skip",
-			"next": "Next",
-			"confirm": "Confirm",
-			"back": "Go Back"
-		},
-		"placeholders": {
-			"website": "https://www.yourwebsite.com",
-			"phone": "+99 999 9999"
-		}
-	},
-	"notifications": {
-		"default_msg_error": "An un expected error has ocurred, we'll try it dosen't happen again.",
-		"mss_device": "This app will not be generated for ",
-		"spam_verify": "The email with your demo could be placed in the spam mailbox",
-		"company_already_created": "Your company has been already created"
-	},
-	"default_layout":{
-		"btn_generate": "Submit your prototype",
-		"btn_success_generate":"You are in the process of verifying your app",
-		"go_to_company": "Go to the company: "
-	},
-	"user_profile": {
-		"tabs": {
-			"user": "User",
-			"app": "App",
-			"key": "Key Store"
-		},
-		"user": {
-			"first_name": "First name",
-			"last_name": "Last name",
-			"email": "Email"
-		},
-		"app": {
-			"company_name": "Company name",
-			"category": "Category",
-			"name": "App name",
-			"website": "Website",
-			"address": "Address",
-			"description": "Description",
-			"phone": "Phone number",
-			"email": "Email",
-			"deliveries_month": "Deliveries per month",
-			"country_code": "Country code",
-			"zip_code": "Zip Code"
-		},
-		"placeholders": {
-			"website": "https://www.yourwebsite.com",
-			"phone": "+00 000 0000000",
-            "select_category": "Select a category"
-		},
-		"keystore": {
-			"key_password": "Key password",
-			"confirm_key_password": "Confirm key password",
-			"alias": "Alias",
-			"alias_password": "Alias password",
-			"confirm_alias_password": "Confirm alias password",
-			"first_and_last_name": "First and last name",
-			"organizational_unit": "Organizational unit",
-			"organization": "Organization",
-			"city_or_locality": "City or location",
-			"state_or_providence": "State or providence",
-			"country_code": "Country",
-			"default_mobile_language": "Select Your App's default language",
-			"language": {
-				"es": "Spanish",
-				"en": "English"
-			}
-		},
-		"buttons": {
-			"save": "Save"
-		}
-	},
-	"dataerror":{
-		"titles" : {
-			"app_info": "App's Information",
-			"images": "Images",
-			"design_data": "Design data on demand of the consumer",
-			"prototype": "Prototype"
-		},
-		"prototype": "You have no created prototype",
-		"icon_app" : "You must fill up Android Icon launcher field",
-		"ios_icon_app" : "You must fill up Apple iOS launcher field",
-		"logo_app" : "You must fill up Company Logo field",
-		"header_logo" : "You must fill up Header Logo field",
-		"splash_logo" : "You must fill up Splash logo field",
-		"metadata" : "You must fill up Key Store field",
-		"first_name": "You must fill up first name field",
-		"last_name": "You must fill up last name field",
-		"email": "You must fill up Email field",
-		"address": "You must fill up Address field",
-		"country_code": "You must fill up Country field",
-		"description": "You must fill up Description field",
-		"name": "You must fill up App Name field",
-		"phone": "You must fill up Phone field",
-		"website": "You must fill up Website field",
-		"zip_code": "You must fill up Zip Code field",
-		"company_name": "You must fill up company name field",
-		"category_id": "You must fill up category field",
-		"deliveries_month": "You must fill up deliveries per month field",
-        "alias": "You must fill up alias field",
-        "key_password": "You must fill up key password field",
-        "alias_password": "You must fill up alias password field",
-        "organization": "You must fill up organization field",
-        "organizational_unit": "You must fill up organizational unit field",
-        "city_or_locality": "You must fill up city or locality field",
-        "state_or_providence": "You must fill up state or providence field",
-        "first_and_last_name": "You must fill up first and last name field",
-		"key_password_confirm": "You must fill up Key password confirmation field",
-		"alias_password_confirm": "You must fill up Alias password confirmation field"
-	},
-	"confirmation": {
-		"title": "Set a password for your account",
-		"text": "Now define a password for your account",
-		"password": "Create your password",
-		"confirm": "Confirm your password",
-		"btn": "Create password",
-		"error_title_no_match": "The confirmation is canceled for pass no match",
-		"error_title_password_confirmation": "Missing data",
-		"error_password_confirmation": "The confirmation should not be left empty",
-		"error_token_title": "Invalid link",
-		"error_token_text": "We're sorry but your link have just expired or it's not correct."
-	},
-	"review": {
-		"missing_data": "This field is missing",
-		"missing_metadata": "Metadata has been not set",
-		"missing_prototype": "There is no selected prototype",
-		"missing_files": "There is no uploaded files"
-	},
-	"newPassword": {
-		"title": "Excellent!",
-		"text": "Please type your email and your new password",
-		"password": "New password",
-		"email": "Email",
-		"btn": "Change your password"
-	},
-	"tableApps": {
-		"user": "user",
-		"name": "Name",
-		"category": "Category",
-		"description": "Description",
-		"status": "App status",
-		"textModal": "You are sure of the change of status to this application",
-		"solvent_true": "this solvent",
-		"solvent_false": "it is not solvent",
-		"solvent" : "Payment",
-        "domain" : "Domain"
-	},
-	"tableUsers": {
-		"first_name": "First name",
-		"last_name": "Last name",
-		"email": "Email",
-		"is_admin": "Administrator",
-		"created_at": "Created at"
-	},
-	"tableLogAdmin": {
-		"action": "Action",
-		"created_at": "Creation date",
-		"updated_at": "Updated date",
-		"is_expired": "It is active"
-	},
-	"modal": {
-		"cancel" : "Cancel",
-		"ok": "Ok",
-		"reject_reason": "Specify the reasons to reject this prototype",
-		"reject_text_help": "Press return to separate each reason"
-	},
-	"status":{
-		"the_status_is":"Status:",
-		"0": "Draft",
-		"1": "Draft",
-		"2": "Ready to send",
-		"3": "Sent",
-		"4": "In review",
-		"5": "Approved",
-		"6": "Rejected",
-		"7": "In process",
-		"8": "Ready for publish",
-		"9": "Published",
-		"generate_a_test_app":"Download Demo"
-	},
-    "joyride": {
-        "themes": "Select the theme for the design of your App and choose for which platform you want it to be developed (Android and / or iOS).",
-		"themes2": "This selector will allow you to choose the theme that best suits the services and / or products offered by your business.",
-        "colors": "This section allows you to choose the color palette that your App will use.",
-        "fonts": "Choose the font you want for the texts of your App and customize its color.",
-        "icons": "Select the theme of icons you want to personalize your App.",
-		"images": "In this tab you must provide us with the indicated measures, the images we need to customize your App.",
-		"maps": "Customize your map by selecting the icons you want to show on your App.",
-		"keystore": "In this tab you must provide us with the data that is required to upload your App to the corresponding store.",
-		"buttons": {
-			"close": "Next",
-			"back": "Back",
-			"last": "Last",
-			"next": "Next",
-			"skip": "Skip"
-		}
     },
-    "notme": {
-        "in_process": "We are unbinding your account's data",
-        "success": "Unbinding successfully done",
-        "error": "the account could not be unbinded"
+    "customer_profile":{
+        "title":"User information",
+        "title_1":"Entry and contact information",
+        "title_2":"Password management",
+        "first_name":"Name",
+        "last_name":"Last name",
+        "full_name":"Full name",
+        "pass":"Enter your current password",
+        "new_pass":"New password",
+        "confirm_pass":"Confirm your new password",
+        "new_email":"New email",
+        "confirm_email":"Confirm your new email"
     },
-    "payment": {
-        "pay_button": "Chose",
-		"upgrade": "Upgrade"
+    "page_404":{
+        "title":"Uups! You're lost.",
+        "message":"The page you are looking for was not found."
+    },
+    "page_500":{
+        "title":"Houston, we have a problem!",
+        "message":"The page you are looking for is temporarily unavailable"
+    },
+    "notifications":{
+        "default_msg_error":"An unexpected error has occurred, we will try not to happen again.",
+        "mss_device":"This App will not be generated for",
+        "spam_verify":"The email with your demo could reach your spam tray",
+        "company_already_created":"The company has already been created"
+    },
+    "tableUsers":{
+        "first_name":"Player's name",
+        "age":"Years",
+        "last_name":"Last name",
+        "email":"Email",
+        "is_admin":"Administrator",
+        "created_at":"Created on"
+    },
+    "modal":{
+        "cancel":"Cancel",
+        "ok":"OK",
+        "reject_reason":"Specify the reasons for rejecting this prototype",
+        "reject_text_help":"Press enter to separate each reason"
+    },
+    "common":{
+        "waiting_message":"Please wait ..."
     }
 }

@@ -101,7 +101,6 @@ const changeUserDefaultLanguage = (code) => {
         return loadJsonLang(code).then(
             response => {
                 sessionStorage.setItem('lang_code', code);
-                axios.defaults.headers.common['lang'] = code;
                 dispatch({
                     type: "SET_USER_DEFAULT_LANGUAGE",
                     lang_code: code,

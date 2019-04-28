@@ -27,7 +27,7 @@ const TableUsersViews = Loadable({
 });
 
 const routes = [
-	{ path: '/', exact: true, name: json_lang.routes.default_layout, component: TableUsersViews },
+	{ path: '/', exact: true, component: TableUsersViews },
 ];
 
 export default routes;

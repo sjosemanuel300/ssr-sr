@@ -21,7 +21,7 @@ class Layout extends Component {
 		});
 
 		if( admin_views !== undefined){
-			render_views = ( <Route path={ admin_views.path } exact={ admin_views.exact } name={ admin_views.name } render={ (props) => ( <admin_views.component {...props} /> )} /> );
+			render_views = ( <Route path={ admin_views.path } exact={ admin_views.exact } render={ (props) => ( <admin_views.component {...props} /> )} /> );
 		}else {
 			render_views = ( <Redirect from="/" to="/404" /> );
 		}
@@ -47,7 +47,6 @@ class Layout extends Component {
 
 const mapStateToProps = (state) => {
 	return {
-		session: state.clientReducer.session,
 		errors: state.notificationReducer.errors,
 		lang: state.clientReducer.json_lang,
 	}
