@@ -47,13 +47,12 @@
         "spam_verify":"The email with your demo could reach your spam tray",
         "company_already_created":"The company has already been created"
     },
-    "tableUsers":{
-        "first_name":"Player's name",
+    "table_users":{
+        "title": "Football player finder",
+        "first_name":"Player name",
         "age":"Years",
-        "last_name":"Last name",
-        "email":"Email",
-        "is_admin":"Administrator",
-        "created_at":"Created on"
+        "position":"Position",
+        "team":"Team"
     },
     "modal":{
         "cancel":"Cancel",

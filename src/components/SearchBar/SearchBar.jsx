@@ -26,7 +26,7 @@ export default class SearchBar extends Component {
         this.state = {
             searchValue: '',
             searchValueNum: '',
-            selectValue: ''
+            selectValue: '',
         }
     }
 
@@ -37,9 +37,6 @@ export default class SearchBar extends Component {
             ...prevState,
             [name]: value
         }));
-        // if (value !== '') {
-        //     this.props.refreshList(this.state);
-        // }
 
         if (e.keyCode === 13) {
             this.props.refreshList(this.state);
@@ -67,7 +64,7 @@ export default class SearchBar extends Component {
             <InputGroup className="search">
                 <Input type="text" name="searchValue" placeholder={ json_lang.tableUsers.first_name } onKeyUp={ (e) => this.onSearchChange(e) } />
                 <div className="input-group select-group">
-                    <TemplateDropdown name={this.state.selectValue}>
+                    <TemplateDropdown name={this.state.selectValue === '' ? json_lang.tableUsers.position : this.state.selectValue }>
                         { obj.map( (templates, key) => {
                             return (<DropdownItem key={ key } onClick={ () => this.toggleData(key) } ><i className="fa fa-bell-o"/> { templates }</DropdownItem>);
                         }) }
@@ -76,7 +73,7 @@ export default class SearchBar extends Component {
                 <Input type="number" name="searchValueNum" placeholder={ json_lang.tableUsers.age } onKeyUp={ (e) => this.onSearchChange(e) } />
                 <InputGroupAddon addonType="append">
                     <Button type="button" color="link" onClick={ () => this.props.refreshList(this.state) }><i className="icon-magnifier icons font-2xl"/></Button>
-                    <Button type="button" color="link" onClick={ () => this.onRemoveIconClick } >
+                    <Button type="button" color="link" onClick={ () => this.onRemoveIconClick() } >
                         <i className="icon-refresh icons font-2xl d-block"/>
                     </Button>
                 </InputGroupAddon>

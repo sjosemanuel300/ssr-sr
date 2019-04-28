@@ -48,12 +48,11 @@
 		"company_already_created": "La compañía ya ha sido creada"
 	},
 	"tableUsers": {
+		"title": "Buscador de futbolistas",
 		"first_name": "Nombre del jugador",
 		"age": "Años",
-		"last_name": "Apellido",
-		"email": "Correo electrónico",
-		"is_admin": "Administrador",
-		"created_at": "Creado el"
+		"position": "Posición",
+		"team": "Equipo"
 	},
 	"modal": {
 		"cancel" : "Cancelar",

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import TableUsers from './TableUsers.jsx';
 import { connect } from 'react-redux';
-import { Paginate, SearchBar } from '../../components';
+import { SearchBar } from '../../components';
 import { getTable, searchData } from '../../store/actions/userActions';
 
 
@@ -25,15 +25,16 @@ class TableUsersViews extends Component {
 
     render() {
         return (
-            <div className="">
+            <div>
+                <h1 className="f-21">{ this.props.lang.tableUsers.title }</h1>
                 {
                      (this.props.table.ready) ?
-                         <div className="">
+                        <React.Fragment>
                              <SearchBar refreshList={ this.handleSearchTransactions }/>
                              <div className="table-responsive">
                                  <TableUsers { ...this.props } handleSort={ this.handleSortTransactions } sort={ this.props.table.sortTransactions } ord={ this.props.table.ordTransactions } />
                              </div>
-                         </div>
+                        </React.Fragment>
                      :
                      <div className="page-loader">
                          <div className="preloader pls-white">

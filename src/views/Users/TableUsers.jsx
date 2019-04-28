@@ -37,13 +37,13 @@ class TableUsers extends Component {
                                 { this.props.lang.tableUsers.first_name }
                             </Table.HeadCell>
                             <Table.HeadCell column='position' sort={ sort } ord={ ord } onClick={ this.handleSort }>
-                                { this.props.lang.tableUsers.email }
+                                { this.props.lang.tableUsers.position }
                             </Table.HeadCell>
                             <Table.HeadCell column='team' sort={ sort } ord={ ord } onClick={ this.handleSort }>
-                                { this.props.lang.tableUsers.email }
+                                { this.props.lang.tableUsers.team }
                             </Table.HeadCell>
                             <Table.HeadCell column='age' sort={ sort } ord={ ord } onClick={ this.handleSort }>
-                                { this.props.lang.tableUsers.last_name }
+                                { this.props.lang.tableUsers.age }
                             </Table.HeadCell>
                         </Table.HeadRow>
                     </Table.Head>

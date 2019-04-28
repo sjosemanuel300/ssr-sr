@@ -1,5 +1,3 @@
-import NotificationHandler from '../../handlers/Notifications';
-import store from '../store';
 import initData from '../../_data';
 /**
  * @description loads the selected language json file for the given code [es, en]
@@ -26,11 +24,11 @@ const getTable = () => {
         }
 };
 
-const searchDataString = ( data, searchValue ) => {
+const searchDataString = ( data, searchValue, name) => {
     let results = [];
     let no_results = [];
     data.forEach(element => {
-        if (element.name.toLowerCase().search(searchValue.toLowerCase()) > -1){
+        if (element[name].toLowerCase().search(searchValue.toLowerCase()) > -1){
             results.push(element);
         }else {
             no_results.push(element);
@@ -39,11 +37,11 @@ const searchDataString = ( data, searchValue ) => {
     return results.concat(no_results);
 }
 
-const searchDataSelecte = ( data, searchValue ) => {
+const searchDataNum = ( data, searchValue, name) => {
     let results = [];
     let no_results = [];
     data.forEach(element => {
-        if (element.position.toLowerCase().search(searchValue.toLowerCase()) > -1){
+        if (element[name] === parseInt(searchValue)){
             results.push(element);
         }else {
             no_results.push(element);
@@ -54,17 +52,40 @@ const searchDataSelecte = ( data, searchValue ) => {
 
 const searchData = ( data ) => {
     return (dispatch) => {
-        console.log( data );
+
         let table = initData;  
-        let searchName = [], selectValue = [], res = [];
-        if(data.searchValue !== ''){
-            searchName = searchDataString( table.dataTransactions.data, data.searchValue);
+        let searchName = [], selectValue = [], searchValueNum = [];
+
+        if(data.searchValueNum !== '' ) {
+            searchValueNum = searchDataNum( table.dataTransactions.data, data.searchValueNum, 'age');
         }
+
         if(data.selectValue !== '' ) {
-            selectValue = searchDataSelecte( table.dataTransactions.data, data.selectValue);
+            if(selectValue.length > 0){
+                selectValue = searchDataString( selectValue, data.selectValue, 'position');
+            } else {
+                selectValue = searchDataString( table.dataTransactions.data, data.selectValue, 'position');
+            }
         }
-        console.log(selectValue);
-        table.dataTransactions.data = searchName.concat( selectValue );
+
+        if(data.searchValue !== ''){
+            if(selectValue.length > 0){
+                searchName = searchDataString( selectValue, data.searchValue, 'name');
+            } else {
+                searchName = searchDataString( table.dataTransactions.data, data.searchValue, 'name');
+            }
+        } else{
+            if(selectValue.length > 0){
+                searchName = selectValue;
+            } else if( searchValueNum.length > 0 ) {
+                searchName = searchValueNum;
+            } else {
+                searchName = table.dataTransactions.data;
+            }
+
+        }
+        
+        table.dataTransactions.data = searchName;
         
         dispatch({
             type: 'SET_TABLE',
@@ -73,20 +94,6 @@ const searchData = ( data ) => {
     }
 }
 
-/**
- * @description updates user app data.
- * @returns 
- */
-const updateUser = () => {
-    
-    return (dispatch) => {
-        let aux_data = {
-            "first_name": store.getState().clientReducer.user.new_first_name,
-            "last_name": store.getState().clientReducer.user.new_last_name
-        };
-        dispatch({type: "WAIT_FOR_RESPONSE"});
-    }
-};
 
 /**
  * @description change the current reading language for the new
@@ -114,7 +121,6 @@ const changeUserDefaultLanguage = (code) => {
 
 export {
     getTable,
-    updateUser,
     changeUserDefaultLanguage,
     searchData,
     searchDataString
