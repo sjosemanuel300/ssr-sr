@@ -1,6 +1,6 @@
 const initialState = {
     available_languages: ["es", "en"],
-    lang_code: sessionStorage.getItem('lang_code') || "es",
+    lang_code: sessionStorage.getItem('lang_code') || "en",
     json_lang: sessionStorage.getItem('lang_code') ? require('../../language/'+ sessionStorage.getItem('lang_code') +'.json') :  require('../../language/es.json'),
     table: {
         ready: false,

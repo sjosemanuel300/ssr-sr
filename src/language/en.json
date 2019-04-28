@@ -47,7 +47,7 @@
         "spam_verify":"The email with your demo could reach your spam tray",
         "company_already_created":"The company has already been created"
     },
-    "table_users":{
+    "tableUsers":{
         "title": "Football player finder",
         "first_name":"Player name",
         "age":"Years",

@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import store from '../../store/store';
 import {DropdownItem, Button, Input, InputGroup, InputGroupAddon } from 'reactstrap';
 import TemplateDropdown from './TemplateDropdown.jsx';
-
-var json_lang = store.getState().clientReducer.json_lang;
-
+import { connect } from 'react-redux';
 
 const obj = ['Attacking Midfield',
 'Central Midfield',
@@ -18,7 +15,7 @@ const obj = ['Attacking Midfield',
 'Left-Back',
 'Right-Back']
 
-export default class SearchBar extends Component {
+class SearchBar extends Component {
 
     constructor(props) {
         super(props);
@@ -59,6 +56,7 @@ export default class SearchBar extends Component {
     }
 
     render() {
+        var json_lang = this.props.lang;
         return (
             <div className="content-seach">
             <InputGroup className="search">
@@ -82,3 +80,12 @@ export default class SearchBar extends Component {
         )
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        lang: state.clientReducer.json_lang
+    }
+};
+
+const mapDispatchToProps = (dispatch) => {return {}};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);

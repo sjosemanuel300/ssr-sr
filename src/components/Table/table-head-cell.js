@@ -17,8 +17,6 @@ class TableHeadCell extends Component {
         if (nextProps !== this.props) {
             let { column, color } = this.state;
 
-            color = (nextProps.sort && nextProps.sort === column) ? sessionStorage.getItem('color') : '#363636';
-
             this.setState({
                 sort: nextProps.sort,
                 ord: nextProps.ord,
