@@ -52,7 +52,7 @@
 		"first_name": "Nombre del jugador",
 		"age": "Años",
 		"position": "Posición",
-		"team": "Equipo"
+		"team": "Nacionalidad"
 	},
 	"modal": {
 		"cancel" : "Cancelar",

@@ -1,16 +1,8 @@
 const initialState = {
     available_languages: ["es", "en"],
     lang_code: sessionStorage.getItem('lang_code') || "en",
-    json_lang: sessionStorage.getItem('lang_code') ? require('../../language/'+ sessionStorage.getItem('lang_code') +'.json') :  require('../../language/es.json'),
-    table: {
-        ready: false,
-        dataTransactions: [],
-        limitTransactions: 10,
-        pageTransactions: 1,
-        ordTransactions: 'desc',
-        sortTransactions: 'id',
-        searchTransactions: ''
-    }
+    json_lang: sessionStorage.getItem('lang_code') ? require('../../language/'+ sessionStorage.getItem('lang_code') +'.json') :  require('../../language/en.json'),
+    table: []
 };
 
 const clientReducer = (state = initialState, action) => {
@@ -21,7 +13,7 @@ const clientReducer = (state = initialState, action) => {
         case 'SET_TABLE':
             return {
                 ...state,
-                table: action.data
+                table: action.table
             };
 
         default:

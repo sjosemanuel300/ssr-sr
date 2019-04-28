@@ -52,7 +52,7 @@
         "first_name":"Player name",
         "age":"Years",
         "position":"Position",
-        "team":"Team"
+        "team":"Nationality"
     },
     "modal":{
         "cancel":"Cancel",

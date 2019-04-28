@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {DropdownItem, Button, Input, InputGroup, InputGroupAddon } from 'reactstrap';
 import TemplateDropdown from './TemplateDropdown.jsx';
 import { connect } from 'react-redux';
-
+import { getTable, searchData } from '../../store/actions/userActions';
 const obj = ['Attacking Midfield',
 'Central Midfield',
 'Centre-Back',
@@ -46,7 +46,7 @@ class SearchBar extends Component {
             searchValueNum: '',
             selectValue: ''
         });
-        
+        this.props.getTable();
     };
 
     toggleData = (data) => {
@@ -70,7 +70,7 @@ class SearchBar extends Component {
                 </div>
                 <Input type="number" name="searchValueNum" placeholder={ json_lang.tableUsers.age } onKeyUp={ (e) => this.onSearchChange(e) } />
                 <InputGroupAddon addonType="append">
-                    <Button type="button" color="link" onClick={ () => this.props.refreshList(this.state) }><i className="icon-magnifier icons font-2xl"/></Button>
+                    <Button type="button" color="link" onClick={ () =>  this.props.searchData(this.state) }><i className="icon-magnifier icons font-2xl"/></Button>
                     <Button type="button" color="link" onClick={ () => this.onRemoveIconClick() } >
                         <i className="icon-refresh icons font-2xl d-block"/>
                     </Button>
@@ -86,6 +86,11 @@ const mapStateToProps = (state) => {
     }
 };
 
-const mapDispatchToProps = (dispatch) => {return {}};
+const mapDispatchToProps = (dispatch) => {
+    return {
+        getTable: (url) => dispatch(getTable(url)),
+        searchData: (data) => dispatch(searchData(data))
+    }
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);

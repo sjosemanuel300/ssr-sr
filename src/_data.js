@@ -1,7 +1,6 @@
 export default {
     ready: true,
-    dataTransactions: {
-        data:[
+    dataTransactions: [
             {
                id:1,
                name:'Manuel NEUER',
@@ -73,22 +72,6 @@ export default {
                position:'Keeper'
             },
          ],
-         links:{
-            first : 'https://my-api/api/users?page=1',
-            last : 'https://my-api/api/users?page=1',
-            prev : null,
-            next : null
-         },
-         meta:{
-            current_page: 1,
-            from: 1,
-            last_page: 1,
-            path :'https://my-api/api/users',
-            per_page: 10,
-            to: 5,
-            total: 5
-         }
-    },
     limitTransactions: 10,
     pageTransactions: 1,
     ordTransactions: 'desc',

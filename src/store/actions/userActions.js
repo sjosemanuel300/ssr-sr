@@ -1,4 +1,8 @@
-import initData from '../../_data';
+import axios from 'axios';
+import store from '../store';
+import NotificationHandler from '../../handlers/Notifications';
+var moment = require('moment');
+
 /**
  * @description loads the selected language json file for the given code [es, en]
  * @param code
@@ -17,11 +21,32 @@ let loadJsonLang = (code) => {
  */
 const getTable = () => {
     return (dispatch) => {
+        dispatch({type: "WAIT_FOR_RESPONSE"});
+        return axios.get('https://football-players-b31f2.firebaseio.com/players.json?print=pretty').then( (res) => {
+            
+            let  _data = [];
+
+            res.data.forEach(element => {
+                let nacimiento=moment(element.dateOfBirth), hoy=moment(), anios=hoy.diff(nacimiento,"years");
+                element.age = anios;
+                _data.push(element);
+            });
+
             dispatch({
                 type: 'SET_TABLE',
-                data: initData
-            })
-        }
+                table: _data
+            });
+
+            dispatch({type: "WAIT_FOR_RESPONSE"});
+ 
+        }).catch( (err) => {
+            dispatch({type: "WAIT_FOR_RESPONSE"});
+            dispatch({
+                type: 'NOTIFICATION',
+                notification: NotificationHandler(err.response)
+            });
+        });
+    }
 };
 
 const searchDataString = ( data, searchValue, name) => {
@@ -52,19 +77,18 @@ const searchDataNum = ( data, searchValue, name) => {
 
 const searchData = ( data ) => {
     return (dispatch) => {
-
-        let table = initData;  
+        let table = store.getState().clientReducer.table;  
         let searchName = [], selectValue = [], searchValueNum = [];
 
         if(data.searchValueNum !== '' ) {
-            searchValueNum = searchDataNum( table.dataTransactions.data, data.searchValueNum, 'age');
+            searchValueNum = searchDataNum( table, data.searchValueNum, 'age');
         }
 
         if(data.selectValue !== '' ) {
             if(selectValue.length > 0){
                 selectValue = searchDataString( selectValue, data.selectValue, 'position');
             } else {
-                selectValue = searchDataString( table.dataTransactions.data, data.selectValue, 'position');
+                selectValue = searchDataString( table, data.selectValue, 'position');
             }
         }
 
@@ -72,7 +96,7 @@ const searchData = ( data ) => {
             if(selectValue.length > 0){
                 searchName = searchDataString( selectValue, data.searchValue, 'name');
             } else {
-                searchName = searchDataString( table.dataTransactions.data, data.searchValue, 'name');
+                searchName = searchDataString( table, data.searchValue, 'name');
             }
         } else{
             if(selectValue.length > 0){
@@ -80,16 +104,14 @@ const searchData = ( data ) => {
             } else if( searchValueNum.length > 0 ) {
                 searchName = searchValueNum;
             } else {
-                searchName = table.dataTransactions.data;
+                searchName = table;
             }
 
         }
         
-        table.dataTransactions.data = searchName;
-        
         dispatch({
             type: 'SET_TABLE',
-            data: table
+            table : searchName
         })
     }
 }
