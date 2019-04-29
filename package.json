@@ -53,6 +53,7 @@
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
     "simple-line-icons": "^2.4.1",
+    "sinon": "^7.3.2",
     "slug": "^0.9.1",
     "svgedit": "^3.0.0-rc.2"
   },
@@ -75,6 +76,9 @@
     "eject": "react-scripts eject"
   },
   "jest": {
-    "setupFiles": ["jest-localstorage-mock"]
+    "setupFiles": [
+      "jest-localstorage-mock"
+    ],
+    "setupFilesAfterEnv": ["<rootDir>src/setupTests.js"]
   }
 }

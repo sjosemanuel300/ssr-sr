@@ -1,12 +1,10 @@
 import React from 'react';
-import {shallow} from 'enzyme/build';
+import { shallow } from 'enzyme';
 import App from './App';
 
-describe('App tests', () => {
-
-  it('mounts without crashing', () => {
+describe('App component', () => {
+    it('starts with a count of 0', () => {
     const wrapper = shallow(<App />);
-    wrapper.unmount()
-  });
-  
+    expect(wrapper).toEqual('Count: 0');
+    });
 });
