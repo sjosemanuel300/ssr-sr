@@ -3,8 +3,7 @@ import { Nav } from 'reactstrap';
 import PropTypes from 'prop-types';
 import { AppNavbarBrand } from '@coreui/react';
 import SwitchLang from './SwitchLang.jsx';
-import logo from '../../assets/logo.png'
-import { connect } from 'react-redux';
+import logo from '../../assets/logo.png';
 
 const propTypes = {
   children: PropTypes.node,
@@ -28,15 +27,4 @@ class DefaultHeader extends Component {
 DefaultHeader.propTypes = propTypes;
 DefaultHeader.defaultProps = defaultProps;
 
-const mapStateToProps = (state) => {
-	return {
-		json_lang: state.clientReducer.json_lang
-	}
-};
-
-const mapDispatchToProps = (dispatch) => {
-	return {
-	}
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(DefaultHeader);
+export default DefaultHeader;

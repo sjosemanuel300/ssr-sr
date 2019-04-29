@@ -4,7 +4,6 @@ import { Container } from 'reactstrap';
 
 import {AppHeader} from '@coreui/react';
 
-import { connect } from 'react-redux';
 // routes config
 import { Preloader, Notification} from '../../components';
 
@@ -45,15 +44,5 @@ class Layout extends Component {
 	}
 }
 
-const mapStateToProps = (state) => {
-	return {
-		lang: state.clientReducer.json_lang,
-	}
-};
 
-const mapDispatchToProps = (dispatch) => {
-	return {
-	}
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Layout);
+export default Layout;

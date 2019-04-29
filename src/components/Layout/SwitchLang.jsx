@@ -7,7 +7,7 @@ class SwitchLang extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			available_languages: [{code: "es", name: "Español"}, {code: "en", name: "English"}], //store.getState().available_languages,
+			available_languages: [{code: "es", name: "Español"}, {code: "en", name: "English"}],
 			dropdownOpen: false
 		}
 	}
