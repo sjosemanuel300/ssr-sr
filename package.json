@@ -30,6 +30,7 @@
     "flag-icon-css": "^3.0.0",
     "font-awesome": "^4.7.0",
     "immutable": "^3.8.2",
+    "jest": "^24.7.1",
     "moment": "^2.24.0",
     "prop-types": "^15.6.1",
     "react": "^16.4.1",
@@ -70,12 +71,10 @@
     "start": "npm-run-all -p watch-css start-js",
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
-    "test": "react-scripts test",
-    "test:cov": "react-scripts test --coverage",
-    "test:debug": "react-scripts --inspect-brk test --runInBand",
+    "tests": "jest",
     "eject": "react-scripts eject"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "./storeTests.js"
+    "setupFiles": ["jest-localstorage-mock"]
   }
 }
