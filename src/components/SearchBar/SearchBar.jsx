@@ -3,17 +3,21 @@ import {DropdownItem, Button, Input, InputGroup, InputGroupAddon } from 'reactst
 import TemplateDropdown from './TemplateDropdown.jsx';
 import { connect } from 'react-redux';
 import { getTable, searchData } from '../../store/actions/userActions';
-const obj = ['Attacking Midfield',
-'Central Midfield',
-'Centre-Back',
-'Centre-Forward',
-'Centre-Forward',
-'Defensive Midfield',
-'Keeper',
-'Left Midfield',
-'Left Wing',
-'Left-Back',
-'Right-Back']
+import { getLangState } from '../../store/selectors/jsonLang';
+
+const obj = [
+    'Attacking Midfield',
+    'Central Midfield',
+    'Centre-Back',
+    'Centre-Forward',
+    'Centre-Forward',
+    'Defensive Midfield',
+    'Keeper',
+    'Left Midfield',
+    'Left Wing',
+    'Left-Back',
+    'Right-Back'
+]
 
 class SearchBar extends Component {
 
@@ -60,7 +64,7 @@ class SearchBar extends Component {
         return (
             <div className="content-seach">
             <InputGroup className="search">
-                <Input type="text" name="searchValue" placeholder={ json_lang.tableUsers.first_name } onKeyUp={ (e) => this.onSearchChange(e) } />
+                <Input type="text" name="searchValue" value={this.state.searchValue} placeholder={ json_lang.tableUsers.first_name } onKeyUp={ (e) => this.onSearchChange(e) } />
                 <div className="input-group select-group">
                     <TemplateDropdown name={this.state.selectValue === '' ? json_lang.tableUsers.position : this.state.selectValue }>
                         { obj.map( (templates, key) => {
@@ -68,7 +72,7 @@ class SearchBar extends Component {
                         }) }
                     </TemplateDropdown>
                 </div>
-                <Input type="number" name="searchValueNum" placeholder={ json_lang.tableUsers.age } onKeyUp={ (e) => this.onSearchChange(e) } />
+                <Input type="number" name="searchValueNum" value={this.state.searchValueNum} placeholder={ json_lang.tableUsers.age } onKeyUp={ (e) => this.onSearchChange(e) } />
                 <InputGroupAddon addonType="append">
                     <Button type="button" color="link" onClick={ () =>  this.props.searchData(this.state) }><i className="icon-magnifier icons font-2xl"/></Button>
                     <Button type="button" color="link" onClick={ () => this.onRemoveIconClick() } >
@@ -82,7 +86,7 @@ class SearchBar extends Component {
 }
 const mapStateToProps = (state) => {
     return {
-        lang: state.clientReducer.json_lang
+        lang: getLangState(state)
     }
 };
 

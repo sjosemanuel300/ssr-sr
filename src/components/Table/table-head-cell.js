@@ -15,7 +15,7 @@ class TableHeadCell extends Component {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps !== this.props) {
-            let { column, color } = this.state;
+            let { color } = this.state;
 
             this.setState({
                 sort: nextProps.sort,

@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { SearchBar } from '../../components';
 import { Table } from '../../components';
 import { getTable } from '../../store/actions/userActions';
-import { getTableState } from '../../store/selectors/table'
+import { getTableState } from '../../store/selectors/table';
+import { getLangState } from '../../store/selectors/jsonLang';
 
 class TableUsersViews extends Component {
     constructor(props) {
@@ -59,7 +60,7 @@ class TableUsersViews extends Component {
 const mapStateToProps = (state) => {
     return {
         table: getTableState( state ),
-        lang: state.clientReducer.json_lang
+        lang: getLangState(state)
     }
 };
 

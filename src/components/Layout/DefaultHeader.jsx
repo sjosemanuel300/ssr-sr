@@ -30,8 +30,6 @@ DefaultHeader.defaultProps = defaultProps;
 
 const mapStateToProps = (state) => {
 	return {
-		session: state.clientReducer.session,
-		errors: state.notificationReducer.errors,
 		json_lang: state.clientReducer.json_lang
 	}
 };

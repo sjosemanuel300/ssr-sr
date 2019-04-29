@@ -47,7 +47,6 @@ class Layout extends Component {
 
 const mapStateToProps = (state) => {
 	return {
-		errors: state.notificationReducer.errors,
 		lang: state.clientReducer.json_lang,
 	}
 };
