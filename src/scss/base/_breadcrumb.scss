@@ -1,9 +1,0 @@
-.breadcrumb {
-  position: relative;
-  @include border-radius($breadcrumb-border-radius);
-  @include borders($breadcrumb-borders);
-
-  .breadcrumb-item{
-    padding-top: 5px;
-  }
-}
