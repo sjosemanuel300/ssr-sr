@@ -1,0 +1,66 @@
+{
+	"buttons": {
+		"add": "Agregar",
+		"create": "Crear",
+		"save": "Guardar",
+		"delete": "Eliminar",
+		"edit": "Editar",
+		"update": "Actualizar",
+		"fix": "Corregir",
+		"search": "Buscar",
+		"confirm": "Confirmar"
+	},
+	"default_header": {
+		"settings_button": "Configuración",
+		"profile_button": "Perfíl",
+		"logout_button": "Cerrar sesión",
+		"generator": "Generador",
+		"select_your_plan": "Selecciona tu Plan",
+		"breadcrumb": {
+			"user_profile": "Perfil de usuario"
+		}
+	},
+	"customer_profile": {
+		"title": "Información del usuario",
+		"title_1": "Información de ingreso y contacto",
+		"title_2": "Gestión de contraseñas",
+		"first_name": "Nombre",
+		"last_name": "Apellido",
+		"full_name": "Nombre completo",
+		"pass" : "Ingresa tu contraseña actual ",
+		"new_pass" : "Nueva contraseña",
+		"confirm_pass" : "Confirma tu nueva contraseña",
+		"new_email": "Nuevo correo electrónico",
+		"confirm_email": "Confirma tu correo electrónico nuevo"
+	},
+	"page_404": {
+		"title": "Uups! Estas perdido.",
+		"message": "La página que buscas no fue encontrada."
+	},
+	"page_500": {
+		"title": "Houston, tenemos un problema!",
+		"message": "La página que buscas está temporalmente no disponible"
+	},
+	"notifications": {
+		"default_msg_error": "Ha ocurrido un error inesperado, intentaremos que no suceda de nuevo.",
+		"mss_device": "Esta App no se generará para ",
+		"spam_verify": "El email con tu demo podria llegar a tu bandeja de spam",
+		"company_already_created": "La compañía ya ha sido creada"
+	},
+	"tableUsers": {
+		"title": "Buscador de futbolistas",
+		"first_name": "Nombre del jugador",
+		"age": "Años",
+		"position": "Posición",
+		"team": "Nacionalidad"
+	},
+	"modal": {
+		"cancel" : "Cancelar",
+		"ok": "De acuerdo",
+		"reject_reason": "Especifique las razones para rechazar este prototipo",
+		"reject_text_help": "Presione enter para separar cada razón"
+	},
+	"common":{
+		"waiting_message" : "Por favor espere..."
+	}
+}
