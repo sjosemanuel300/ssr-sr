@@ -43,6 +43,7 @@
     "simple-line-icons": "^2.4.1"
   },
   "devDependencies": {
+    "jest-localstorage-mock": "^2.4.0",
     "react-scripts": "^2.1.8"
   },
   "scripts": {
