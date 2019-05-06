@@ -7,5 +7,5 @@ const store = testStore;
 
 it('render of the isolated component', () => {
   const wrapper = render(<SearchBar store={store}/>);
-  expect( wrapper.find(".search").length );
+  expect( wrapper.find(".search").length ).toBe(1);
 });

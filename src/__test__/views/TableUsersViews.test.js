@@ -29,5 +29,5 @@ it('render of the isolated component TableUsersViews', () => {
     </Provider>
     );
 
-  expect( wrapper.find(".player") ).to.have.lengthOf(1);
+  expect( wrapper.find(".player").length).toBe(1);
 });
