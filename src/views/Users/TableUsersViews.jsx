@@ -40,7 +40,7 @@ class TableUsersViews extends Component {
                                 this.props.table.map( (user, key) => {
                                         return (
                                             <Table.Row key={ key } item={ key } selected={ false } pointer={ false } border={ true }>
-                                                <Table.Cell width="25%"> { user.name } </Table.Cell>
+                                                <Table.Cell width="25%"> <span className="player"> { user.name } </span> </Table.Cell>
                                                 <Table.Cell width="25%"> { user.position } </Table.Cell>
                                                 <Table.Cell width="25%"> { user.nationality } </Table.Cell>
                                                 <Table.Cell width="25%"> { user.age } </Table.Cell>

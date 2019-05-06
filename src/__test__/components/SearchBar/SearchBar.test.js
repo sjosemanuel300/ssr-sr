@@ -1,7 +1,9 @@
 import React from 'react';
 import {render} from 'enzyme/build';
 import SearchBar from '../../../components/SearchBar/SearchBar.jsx';
-import store from '../../../store/store';
+import testStore from '../../../store/testStore';
+
+const store = testStore;
 
 it('render of the isolated component', () => {
   const wrapper = render(<SearchBar store={store}/>);
